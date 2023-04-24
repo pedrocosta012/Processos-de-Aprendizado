@@ -1,10 +1,16 @@
 #include <iostream>
+// Biblioteca para manipulação de string
 #include <string.h>
+// Biblioteca para manipulação do SO
 #include <stdlib.h>
 
 using namespace std;
 
-int main (int argc, char *argv[]) {
+int main (
+    // Contador argumentos passados (1 == "<Caminho do arquivo>", 2 ou + == "Argumentos foram passados")
+    int argc,
+    // Ponteiro onde serão armazenados os argumentos passados
+    char *argv[]) {
 
     if (argc > 1) {
         if (!strcmp(argv[1], "sol")) {
