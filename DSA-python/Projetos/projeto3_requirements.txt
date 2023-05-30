@@ -1,0 +1,4 @@
+clyent
+nbformat
+openai
+requests
