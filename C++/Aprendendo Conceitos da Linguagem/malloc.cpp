@@ -1,6 +1,6 @@
 #include <iostream>
-#include <stdio.h>  // Função gets
-#include <stdlib.h>  // Função malloc
+#include <stdio.h>  // Função gets(análoga ao "cin" para leitura de input do usuário)
+#include <stdlib.h>  // Função malloc(função que permite alocar memória dinamecamente)
 
 using namespace std;
 
