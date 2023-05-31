@@ -1,5 +1,8 @@
 import openai
-openai.api_key = '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'
+from os import environ
+from dotenv import load_dotenv
+load_dotenv()
+openai.api_key = environ['API_KEY']
 
 
 def gera_texto(imp_prompt):

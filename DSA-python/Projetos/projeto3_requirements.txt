@@ -2,3 +2,4 @@ clyent
 nbformat
 openai
 requests
+python-dotenv
