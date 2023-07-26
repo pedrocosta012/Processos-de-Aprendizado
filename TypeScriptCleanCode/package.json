@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:staged": "jest",
+    "test:watch": "jest --watch",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.3",
     "@types/node": "^20.4.5",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
@@ -21,7 +24,9 @@
     "eslint-plugin-sonarjs": "^0.19.0",
     "git-commit-msg-linter": "^5.0.4",
     "husky": "^8.0.3",
+    "jest": "^29.6.1",
     "lint-staged": "^13.2.3",
+    "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
   }
 }

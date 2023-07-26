@@ -36,6 +36,7 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "mocha/no-mocha-arrows": "off"
     }
 }
