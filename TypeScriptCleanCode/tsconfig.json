@@ -6,5 +6,9 @@
     "outDir": "./dist",
     "importsNotUsedAsValues": "remove",
     "esModuleInterop": true,
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "tests"
+  ]
 }
