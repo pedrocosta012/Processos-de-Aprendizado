@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES2021",
+        "outDir": "./dist",
+        "module": "CommonJS",
+        "esModuleInterop": true,
+        "allowJs": true
+    },
+    "exclude": [
+        "coverage",
+        "jest.config.js"
+    ]
+}
