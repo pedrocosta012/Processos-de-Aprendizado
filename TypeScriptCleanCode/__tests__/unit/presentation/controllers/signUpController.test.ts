@@ -6,7 +6,7 @@ import { EmailValidator } from '../../../../src/presentation/protocols/emailVali
 
 interface SutTypes {
     sut: Controller
-    emailValidator: EmailValidator
+    emailValidatorStub: EmailValidator
 }
 
 const makeSut = (): SutTypes => {
@@ -15,11 +15,11 @@ const makeSut = (): SutTypes => {
             return true;
         }
     }
-    const emailValidator = new EmailValidatorStub();
-    const sut = new SignUpController(emailValidator);
+    const emailValidatorStub = new EmailValidatorStub();
+    const sut = new SignUpController(emailValidatorStub);
     return {
         sut,
-        emailValidator
+        emailValidatorStub
     };
 };
 
@@ -84,8 +84,8 @@ describe('SignUpController', () => {
     });
 
     it('Should return 400 if an invalid email is provided', () => {
-        const { sut, emailValidator } = makeSut();
-        jest.spyOn(emailValidator, 'isValid').mockReturnValueOnce(false);
+        const { sut, emailValidatorStub } = makeSut();
+        jest.spyOn(emailValidatorStub, 'isValid').mockReturnValueOnce(false);
         const httpRequest = {
             body: {
                 name: 'any_name',
