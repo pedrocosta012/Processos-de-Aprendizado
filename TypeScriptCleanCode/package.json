@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint 'src/**' --fix",
-    "test": "jest",
-    "test:staged": "jest",
-    "test:watch": "jest --watch"
+    "test": "jest --passWithNoTests --silent --runInBand",
+    "test:watch": "yarn test -- --watch",
+    "test:staged": "yarn test -- --findRelatedTests",
+    "test:verbose": "jest -- --passWithNoTests"
   },
   "keywords": [],
   "author": "",
