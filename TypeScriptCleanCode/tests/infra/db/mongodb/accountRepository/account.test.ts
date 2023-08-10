@@ -1,6 +1,6 @@
 import { AccountMongoRepository } from '../../../../../src/infra/db/mongodb/accountRepository/account';
+import env from '../../../../../src/main/config/env';
 import { mongoHelper } from '../helper/mongoHelper';
-import 'dotenv/config';
 
 const makeSut = (): AccountMongoRepository => {
     return new AccountMongoRepository();
@@ -8,7 +8,7 @@ const makeSut = (): AccountMongoRepository => {
 
 describe('Account Mongo Repository', () => {
     beforeAll(async () => {
-        await mongoHelper.connect(`mongodb://${process.env.MONGO_HOST}:${process.env.MONGO_PORT}/jest-${process.env.MONGO_DATABASE}`);
+        await mongoHelper.connect(env.mongoUrlConnectionTest);
     });
 
     afterAll(async () => {

@@ -2,10 +2,11 @@ import request from 'supertest';
 import app from '../../../src/main/config/app';
 import { faker } from '@faker-js/faker';
 import { mongoHelper } from '../../infra/db/mongodb/helper/mongoHelper';
+import env from '../../../src/main/config/env';
 
 describe('SignUp Routes', () => {
     beforeAll(async () => {
-        await mongoHelper.connect(`mongodb://${process.env.MONGO_HOST}:${process.env.MONGO_PORT}/jest-${process.env.MONGO_DATABASE}`);
+        await mongoHelper.connect(env.mongoUrlConnectionTest);
     });
 
     afterAll(async () => {
