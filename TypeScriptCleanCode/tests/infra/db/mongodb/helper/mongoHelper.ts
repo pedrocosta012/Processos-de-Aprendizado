@@ -4,7 +4,6 @@ class MongoHelper {
     private client: MongoClient
 
     async connect(urlConnection: string): Promise<void> {
-        console.log('urlConnection', urlConnection);
         this.client = await MongoClient.connect(urlConnection);
     }
 
