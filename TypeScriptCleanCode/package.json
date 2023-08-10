@@ -11,12 +11,12 @@
     "test:verbose": "jest --passWithNoTests --runInBand"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Pedro Costa",
+  "license": "MIT",
   "devDependencies": {
-    "@shelf/jest-mongodb": "^4.1.7",
     "@types/bcrypt": "^5.0.0",
     "@types/jest": "^29.5.3",
+    "@types/mongodb": "^4.0.7",
     "@types/validator": "^13.9.0",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
@@ -35,6 +35,8 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "dotenv": "^16.3.1",
+    "mongodb": "^5.7.0",
     "mongoose": "^7.4.2",
     "validator": "^13.9.0"
   }
