@@ -1,7 +1,7 @@
 import request from 'supertest';
 import app from '../../../src/main/config/app';
 import { faker } from '@faker-js/faker';
-import { mongoHelper } from '../../infra/db/mongodb/helper/mongoHelper';
+import { mongoHelper } from '../../../src/infra/db/helper/mongoHelper';
 import env from '../../../src/main/config/env';
 
 describe('SignUp Routes', () => {

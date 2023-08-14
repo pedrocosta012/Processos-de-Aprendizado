@@ -1,6 +1,6 @@
 import { AccountMongoRepository } from '../../../../../src/infra/db/mongodb/accountRepository/account';
 import env from '../../../../../src/main/config/env';
-import { mongoHelper } from '../helper/mongoHelper';
+import { mongoHelper } from '../../../../../src/infra/db/helper/mongoHelper';
 
 const makeSut = (): AccountMongoRepository => {
     return new AccountMongoRepository();
