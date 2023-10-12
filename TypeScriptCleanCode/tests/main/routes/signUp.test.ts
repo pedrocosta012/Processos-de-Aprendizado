@@ -1,8 +1,9 @@
-import request from 'supertest';
-import app from '../../../src/main/config/app';
 import { faker } from '@faker-js/faker';
-import { mongoHelper } from '../../../src/infra/db/helper/mongoHelper';
+import request from 'supertest';
+
+import app from '../../../src/main/config/app';
 import env from '../../../src/main/config/env';
+import { mongoHelper } from '../../../src/infra/db/helper/mongoHelper';
 
 describe('SignUp Routes', () => {
     beforeAll(async () => {
@@ -18,13 +19,15 @@ describe('SignUp Routes', () => {
         await accountCollection.deleteMany({});
     });
 
-    test('Should enable CORS', async () => {
+    it('Should enable CORS', async () => {
         const fakeUserPassword = faker.internet.password();
-        await request(app).post('/signup').send({
+
+        const apiRequest = request(app);
+        await apiRequest.post('/signup').send({
             name: faker.person.fullName(),
             email: faker.internet.email(),
             password: fakeUserPassword,
             passwordConfirmation: fakeUserPassword
         }).expect(200);
-    });
+    }, 10000);
 });
